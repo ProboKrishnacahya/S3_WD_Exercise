@@ -3,13 +3,13 @@
 abstract class Barang {
     public $nama;
     public $barcode;
-    public $tanggalMasuk;
+    public $tanggal_masuk;
     public $jumlah;
 
     public function __construct() {
     $this->nama = "";
     $this->barcode = "";
-    $this->tanggalMasuk = "";
+    $this->tanggal_masuk = "";
     $this->jumlah = 0;
     }
 
@@ -30,11 +30,11 @@ abstract class Barang {
     }
 
     public function getTanggalMasuk(){
-        return $this->tanggalMasuk;
+        return $this->tanggal_masuk;
     }
 
-    public function setTanggalMasuk($tanggalMasuk){
-        $this->tanggalMasuk = $tanggalMasuk;
+    public function setTanggalMasuk($tanggal_masuk){
+        $this->tanggal_masuk = $tanggal_masuk;
     }
 
     public function getJumlah(){
