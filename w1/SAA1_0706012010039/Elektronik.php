@@ -2,7 +2,7 @@
 
 require_once "Barang.php";
 
-class Elektronik extends Barang
+class Elektronik extends Barang implements getAllData
 {
 
     // tambahkan code disini
