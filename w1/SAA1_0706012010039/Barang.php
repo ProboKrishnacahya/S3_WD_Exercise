@@ -13,8 +13,6 @@ abstract class Barang {
     $this->jumlah = 0;
     }
 
-    abstract public function getAllData();
-
     public function getNama(){
         return $this->nama;
     }
@@ -46,6 +44,8 @@ abstract class Barang {
     public function setJumlah($jumlah){
         $this->jumlah = $jumlah;
     }
+
+    abstract public function getAllData();
 }
 
 ?>
