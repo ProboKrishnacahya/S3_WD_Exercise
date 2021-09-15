@@ -29,7 +29,7 @@ class Elektronik extends Barang
         $data['barcode'] = $this->barcode;
         $data['tanggal_masuk'] = $this->tanggal_masuk;
         $data['jumlah'] = $this->jumlah;
-        $data['daya'] = $this->daya;
+        $data['keterangan'] = $this->daya;
         return $data;
     }
 };
