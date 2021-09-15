@@ -5,6 +5,7 @@ require "Elektronik.php";
 require "Konsumsi.php";
 require "Perabotan.php";
 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (
         !empty($_POST["nama"]) &&
@@ -19,27 +20,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $list = array();
         }
 
-        if ($_POST["exampleRadios"] == "Konsumsi") {
+        $nama = $_POST['nama'];
+        $barcode = $_POST['barcode'];
+        $tanggal = $_POST['tanggal'];
+        $jumlah = $_POST['jumlah'];
 
-            // Code here
-            // Push object to array
+        if($_POST["exampleRadios"] == "Konsumsi"){
 
-        } else if ($_POST["exampleRadios"] == "Elektronik") {
+           $expired = $_POST['expired'];
+           $object = new Konsumsi($nama, $barcode, $tanggal, $jumlah, $expired); 
+           array_push($list, $object);
 
-            // Code here
-            // Push object to array
+        }else if($_POST["exampleRadios"] == "Elektronik"){
 
-        } else if ($_POST["exampleRadios"] == "Perabotan") {
+            $keterangan = $_POST['daya'];
+            $object = new Elektronik($nama, $barcode, $tanggal, $jumlah, $keterangan);
+            array_push($list, $object);
 
-            // Code here
-            // Push object to array
+        }else if($_POST["exampleRadios"] == "Perabotan"){
 
+            $bahan = $_POST['jenis'];
+            $object = new Perabotan($nama, $barcode, $tanggal, $jumlah, $bahan);
+            array_push($list, $object);
         }
 
         $_SESSION["data"] = serialize($list);
         header("Location: index.php");
         exit();
-    } else {
+    }else{
         header("Location: Form_Barang.php");
         exit();
     }

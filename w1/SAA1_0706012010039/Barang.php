@@ -6,42 +6,43 @@ abstract class Barang {
     public $tanggal_masuk;
     public $jumlah;
 
-    public function __construct() {
-    $this->nama = "";
-    $this->barcode = "";
-    $this->tanggal_masuk = "";
-    $this->jumlah = 0;
-    }
+    function __construct($nama, $barcode, $tanggal_masuk, $jumlah) 
+    {
+        $this->nama = $nama;
+        $this->barcode = $barcode;
+        $this->tanggal_masuk = $tanggal_masuk;
+        $this->jumlah = $jumlah;
+    } 
 
-    public function getNama(){
+    function getNama(){
         return $this->nama;
     }
 
-    public function setNama($nama){
+    function setNama($nama){
         $this->nama = $nama;
     }
 
-    public function getBarcode(){
+    function getBarcode(){
         return $this->barcode;
     }
 
-    public function setBarcode($barcode){
+    function setBarcode($barcode){
         $this->barcode = $barcode;
     }
 
-    public function getTanggalMasuk(){
+    function getTanggalMasuk(){
         return $this->tanggal_masuk;
     }
 
-    public function setTanggalMasuk($tanggal_masuk){
+    function setTanggalMasuk($tanggal_masuk){
         $this->tanggal_masuk = $tanggal_masuk;
     }
 
-    public function getJumlah(){
+    function getJumlah(){
         return $this->jumlah;
     }
 
-    public function setJumlah($jumlah){
+    function setJumlah($jumlah){
         $this->jumlah = $jumlah;
     }
 
