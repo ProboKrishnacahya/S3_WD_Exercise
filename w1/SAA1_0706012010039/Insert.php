@@ -5,7 +5,6 @@ require "Elektronik.php";
 require "Konsumsi.php";
 require "Perabotan.php";
 
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (
         !empty($_POST["nama"]) &&
@@ -26,7 +25,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $jumlah = $_POST['jumlah'];
 
         if ($_POST["exampleRadios"] == "Konsumsi") {
-
             $expired = $_POST['expired'];
             $object = new Konsumsi($nama, $barcode, $tanggal, $jumlah, $expired);
             array_push($list, $object);

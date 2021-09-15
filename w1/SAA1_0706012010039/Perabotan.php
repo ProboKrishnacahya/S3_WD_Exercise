@@ -25,7 +25,6 @@ class Perabotan extends Barang{
         $data['barcode'] = $this->barcode;
         $data['tanggal_masuk'] = $this->tanggal_masuk;
         $data['jumlah'] = $this->jumlah;
-        
         $data['keterangan'] = $this->bahan;
 
         return $data;
